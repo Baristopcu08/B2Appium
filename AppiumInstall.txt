@@ -1,0 +1,89 @@
+1.	Install JAVA SDK, standart intall
+	https://www.oracle.com/
+	v.17 ve v.19
+
+	C:\Program Files\Java\jdk-17
+	C:\Program Files\Java\jdk-19
+
+	Env. Vars. -> JAVA_HOME	-> C:\Program Files\Java\jdk-19
+	Path -> C:\Program Files\Java\jdk-19\bin
+
+
+2. 	Install Nodejs for cli, standart intall
+	https://nodejs.org/en/download/
+
+	nodejs install yeri : C:\nodejs
+	npm install yeri 	: C:\Users\ahmet\AppData\Roaming\npm
+
+	for npm update	c:\>npm install -g npm@9.4.2
+
+	C:\Program Files\nodejs\
+	Path -> C:\Program Files\nodejs\
+
+3.	Install	Android SDK
+	a.	Android Studio, new Project -> Android
+	b.	Android Studio
+
+	Env. Vars -> ANDROID_HOME -> C:\..\Android\Sdk
+	Path -> C:\Android\Sdk\tools
+	Path -> C:\Android\Sdk\platform-tools
+	Path -> C:\Android\Sdk\build-tools
+
+
+4.	Appium install
+	c:\>npm install -g appium
+	c:\>npm install -g appium-doctor
+
+	appium install location : C:\Users\ahmet\AppData\Roaming\npm
+
+5.	Install Appium inspector
+	https://github.com/appium/appium-inspector/releases/tag/v2022.11.1
+
+	C:\Users\{user}\AppData\Roaming\appium-inspector
+
+
+ADB COMMANDS
+adb devices
+adb devices -l
+adb -s DeviceSerial shell getprop
+adb -s DeviceSerial shell getprop ro.product.model
+
+adb shell
+	dumpsys window | grep -E 'mCurrentFocus'
+adb shell
+
+
+
+API Demos uygulamasinda
+1.	Scenario 1
+	a.	Views->Controls'a tiklayin
+	b.	Light Theme'e tiklayin
+	c.	Checkbox1'e tiklayin ve checked oldugunu assert edin
+	d.	RadioButton1'e tiklayin  ve checked oldugunu assert edin
+	e.	Star'a  tiklayin  ve checked oldugunu assert edin
+	f.	Ilk button'a  tiklayin ve textinin ON, statüsünün checked oldugunu assert edin
+	g.	Ikinci button'un textinin OFF, statüsünün unchecked oldugunu assert edin
+
+2.	Scenario 2
+	a.	Views->Expendable List'e tiklayin
+	b.	Custom Adaptor'e tiklayin
+	c.	People Names'e tiklayin ve 4 adet ismin visible oldugunu assert edin
+	d.	People Names'e tekrar tiklayin ve 4 adet ismin invisible oldugunu assert edin
+	e.	Fish Names'e tiklayin ve ikinci siradaki ismin Bubbles oldugunu assert edin.
+
+3.	Scenario 3
+	a.	10 ile 20 arasinda random bir sayi secin
+	b.	Views->TextSwitcher'a tiklayin
+	c.	Secilen random sayiya gelinceye kadar Next butonuna tiklayin
+	d.	Istenilen sayiya ulasilinca navigate().back() ile geri gelin.
+
+4.	Scenario 4
+	a.	OS'e tiklayin
+	b.	SMS messaging'e tiklayin
+	c.	Recipent kismina kendi telefon numaranizi girin
+	d.	Message Body kismina herhangi bir message girin
+	e.	Send butonuna basin
+	f.	Buton altinda cikacak sucess notification'i asset edin.
+	g.	Bu Scenario'da Recipent kismina text girip tekrar edin ve mesajin gönderilmedigini assert edin
+
+	//*[@*[contains(., 'Hello')]]

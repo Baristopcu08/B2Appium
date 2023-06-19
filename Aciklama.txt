@@ -1,0 +1,55 @@
+1.  Appium
+    Mobile App testlari yapilir
+    Google Play, Appstore'dan indirilen uygulamalar
+    WhatsApp, Calculator
+
+3.  Apps
+    a.  Native App
+        Tamami ile uygulama
+
+    b.  Hybrit
+        Uygulama icinde Web Sayfalari vardir
+
+
+3.  Baglanti icin
+    1. Ne ile baglanilacak  : Appium
+    2. Neye baglanilacak    : Hangi cihaz + Hangi uygulama
+
+
+    Selenium                        Appium
+    WebDriver, browser              AppiumDriver, Cihaz, Uygulama
+
+
+
+4.  Appium:
+    Cihaz :
+        {
+          "appium:udid": "emulator-5554",
+          "appium:version": "11",
+          "appium:deviceName": "GalaxyNexus720x1280_API30",
+          "platformName": "Android"
+        }
+
+    App: appPackage
+         appActivity
+
+    appPackage ve   appActivity bulmak icin
+    1. Apk info uygulamasi kullanilabilir
+    2. adb kullanilabilir
+
+    Consolda :  ceptel/ emülator bagli olmali ve ilgili app acik ve aktiv olmali
+    C:\>adb shell
+    a33x:/ $ dumpsys window | grep -E 'mCurrentFocus'
+      mCurrentFocus=Window{10ba14a u0 com.touchboarder.android.api.demos/com.example.android.apis.ApiDemos}
+
+    appPackage  : com.touchboarder.android.api.demos
+    appActivity : com.example.android.apis.ApiDemos
+
+
+
+5.  AppiumDriver :
+    RemoteWebDriver
+        WebDriver
+            AppiumDriver
+                AndroidDriver
+                IOSDriver
