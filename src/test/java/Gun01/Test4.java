@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import utils.App;
 import utils.Device;
 
 import java.net.MalformedURLException;
@@ -32,18 +33,18 @@ public class Test4 {
                 .withIPAddress("127.0.0.1")
                 .usingAnyFreePort()
                 .build();
-        service.clearOutPutStreams();
+        //service.clearOutPutStreams();
         service.start();
 
         DesiredCapabilities caps = new DesiredCapabilities();
 
         caps.setCapability("appium:udid", Device.SAMSUNG_A33.getUdid());
-        caps.setCapability("appium:version", "12");
-        caps.setCapability("appium:deviceName","Samsung A33");
-        caps.setCapability("platformName", "Android");
+        caps.setCapability("appium:version", Device.SAMSUNG_A33.getVersion());
+        caps.setCapability("appium:deviceName",Device.SAMSUNG_A33.getDeviceName());
+        caps.setCapability("platformName", Device.SAMSUNG_A33.getPlatformName());
 
-        caps.setCapability("appium:appPackage", "com.touchboarder.android.api.demos");
-        caps.setCapability("appium:appActivity", "com.touchboarder.androidapidemos.MainActivity");
+        caps.setCapability("appium:appPackage", App.APIDEMOS.getAppPackage());
+        caps.setCapability("appium:appActivity", App.APIDEMOS.getAppActivity());
 
         driver = new AndroidDriver<>(service.getUrl(), caps);
         wait = new WebDriverWait(driver, 20);

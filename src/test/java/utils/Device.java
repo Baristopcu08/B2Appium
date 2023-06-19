@@ -6,6 +6,13 @@ public enum Device {
             "12",
             "Samsung A33",
             "Android"
+    ),
+
+    EMULATOR(
+            "emulator-5554",
+            "12",
+            "Pixel 5",
+            "Android"
     );
 
 
