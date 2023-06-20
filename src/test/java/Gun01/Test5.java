@@ -2,10 +2,14 @@ package Gun01;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -16,6 +20,8 @@ import utils.App;
 import utils.Device;
 
 import java.net.MalformedURLException;
+import java.time.Duration;
+
 import static utils.Device.*;
 import static utils.App.*;
 
@@ -27,7 +33,6 @@ public class Test5 {
     AppiumDriverLocalService service;
     WebDriverWait wait;
     AppiumDriver<?> driver;
-
 
 
     public void startAppium(){
@@ -81,7 +86,6 @@ public class Test5 {
         click(country);
         sleep(3000);
         driver.hideKeyboard();
-
     }
 
     public void click(String text){

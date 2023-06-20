@@ -1,0 +1,27 @@
+
+API Demos uygulamasinda
+1.	Scenario 1
+	a.	API demos->Views->Controls'a tiklayin
+	b.	01. Light Theme'e tiklayin
+	c.	Checkbox1'e tiklayin ve checked oldugunu assert edin
+	d.	RadioButton1'e tiklayin  ve checked oldugunu assert edin
+	e.	Star'a  tiklayin  ve checked oldugunu assert edin
+	f.	Ilk button'a  tiklayin ve textinin ON, statüsünün checked oldugunu assert edin
+	g.	Ikinci button'un textinin OFF, statüsünün unchecked oldugunu assert edin
+
+
+2.	Scenario 2
+	a.	API Demos->Views->Expendable List'e tiklayin
+	b.	Custom Adaptor'e tiklayin
+	c.	People Names'e tiklayin ve 4 adet ismin visible oldugunu assert edin
+	d.	People Names'e tekrar tiklayin ve 4 adet ismin invisible oldugunu assert edin
+	e.	Fish Names'e tiklayin ve ikinci siradaki ismin Bubbles oldugunu assert edin.
+
+3.	Scenario 3
+	a.	10 ile 20 arasinda random bir sayi secin
+	b.	API Demos->Views->TextSwitcher'a tiklayin
+	c.	Secilen random sayiya gelinceye kadar Next butonuna tiklayin
+	d.	Istenilen sayiya ulasilinca navigate().back() ile geri gelin.
+
+
+	//*[@*[contains(., 'Hello')]]

@@ -4,21 +4,25 @@ public enum App {
 
     APIDEMOS(
             "com.touchboarder.android.api.demos",
-            "com.touchboarder.androidapidemos.MainActivity"
+            "com.touchboarder.androidapidemos.MainActivity",
+            "ApiDemos.zip"
     ),
 
     CALCULATOR(
             "com.sec.android.app.popupcalculator",
-            "Calculator"
+            "Calculator",
+            ""
     )
     ;
 
     String appPackage;
     String appActivity;
+    String app;
 
-    App(String appPackage, String appActivity) {
+    App(String appPackage, String appActivity, String app) {
         this.appPackage = appPackage;
         this.appActivity = appActivity;
+        this.app = app;
     }
 
     public String getAppPackage() {
