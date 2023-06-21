@@ -21,6 +21,13 @@ public class Driver {
         service.start();
     }
 
+    public static AppiumDriver<?> getDriver(){
+        if (driver != null)
+            return driver;
+        else
+            throw new RuntimeException("Driver is not created");
+    }
+
 
     public static AppiumDriver<?> getDriver(Device device, App app){
         if (driver == null) {
@@ -46,6 +53,21 @@ public class Driver {
         driver.quit();
         service.stop();
     }
+
+    /*
+        RemoteWebDriver
+            WebDriver
+                AppiumDriver
+                    AndroidDriver
+                    IOSDriver
+
+
+        WebElement
+            AndroidElement
+            IOSElement
+
+
+     */
 
 
 }
